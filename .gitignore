@@ -102,3 +102,4 @@ ENV/
 # User's Config File
 config.yml
 
+config.yaml

@@ -1,0 +1,96 @@
+mqtt:
+  host: mosquitto.local
+  port: 1883
+  user: "mqtt_client"
+  password: "Test123!"
+  topic_prefix: qa/dev/rpi
+  ha_discovery:
+    enabled: yes
+    prefix: qa/discovery
+    name: rpi
+    
+sensor_modules:
+  - name: AS7341_clear
+    module: AS7341
+
+sensor_inputs:
+  # The configuration of the specific sensor value to use (LM75 only has temperature)
+  - name: AS7341_clear
+    module: AS7341_clear
+    digits: 0
+    ha_discovery:
+      name: Spectrum_Clear
+      device_class: illuminance
+      unit_of_measurement: "lux"
+  - name: AS7341_channel_415nm
+    module: AS7341_clear
+    type: channel_415nm
+    digits: 0
+    ha_discovery:
+      name: Spectrum_Violet
+      device_class: illuminance
+      unit_of_measurement: "lux"
+  - name: AS7341_channel_445nm
+    module: AS7341_clear
+    type: channel_445nm
+    digits: 0
+    ha_discovery:
+      name: Spectrum_Indigo
+      device_class: illuminance
+      unit_of_measurement: "lux"
+  - name: AS7341_channel_480nm
+    module: AS7341_clear
+    type: channel_480nm
+    digits: 0
+    ha_discovery:
+      name: Spectrum_Blue
+      device_class: illuminance
+      unit_of_measurement: "lux"
+  - name: AS7341_channel_515nm
+    module: AS7341_clear
+    type: channel_515nm
+    digits: 0
+    ha_discovery:
+      name: Spectrum_Cyan
+      device_class: illuminance
+      unit_of_measurement: "lux"
+  - name: AS7341_channel_555nm
+    module: AS7341_clear
+    type: channel_555nm
+    digits: 0
+    ha_discovery:
+      name: Spectrum_Green
+      device_class: illuminance
+      unit_of_measurement: "lux"
+  - name: AS7341_channel_590nm
+    module: AS7341_clear
+    type: channel_590nm
+    digits: 0
+    ha_discovery:
+      name: Spectrum_Yellow
+      device_class: illuminance
+      unit_of_measurement: "lux"
+  - name: AS7341_channel_630nm
+    module: AS7341_clear
+    type: channel_630nm
+    digits: 0
+    ha_discovery:
+      name: Spectrum_Orange
+      device_class: illuminance
+      unit_of_measurement: "lux"
+  - name: AS7341_channel_680nm
+    module: AS7341_clear
+    type: channel_680nm
+    digits: 0
+    ha_discovery:
+      name: Spectrum_Red
+      device_class: illuminance
+      unit_of_measurement: "lux"
+  - name: AS7341_channel_nir
+    module: AS7341_clear
+    type: channel_nir
+    digits: 0
+    ha_discovery:
+      name: Spectrum_NIR
+      device_class: illuminance
+      unit_of_measurement: "lux"
